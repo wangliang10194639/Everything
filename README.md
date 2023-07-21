@@ -1,4 +1,3 @@
 # Everything
-The first git repository for me
-so
-good
+
+我创建这个仓库主要用于个人学习使用，仓库会不定时更新个人代码。
