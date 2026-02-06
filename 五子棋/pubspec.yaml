@@ -1,0 +1,34 @@
+name: gomoku_puzzle
+description: 五子棋闯关游戏 - 渐进式挑战和学习体验
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # 状态管理
+  provider: ^6.0.5
+  
+  # 本地存储
+  shared_preferences: ^2.2.2
+  
+  # 动画效果
+  flutter_animation_set: ^0.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/levels/
