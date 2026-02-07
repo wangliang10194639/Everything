@@ -1,0 +1,27 @@
+{
+  "config_name": "Default",
+  "version": "1.0.0",
+  "auto_start": false,
+  "show_notifications": true,
+  "game_process": "war3.exe",
+  "item_mappings": [
+    {"original": "1", "mapped": "1", "enabled": true},
+    {"original": "2", "mapped": "2", "enabled": true},
+    {"original": "3", "mapped": "3", "enabled": true},
+    {"original": "4", "mapped": "4", "enabled": true},
+    {"original": "5", "mapped": "5", "enabled": true},
+    {"original": "6", "mapped": "6", "enabled": true}
+  ],
+  "hero_skill_mappings": [
+    {"original": "Q", "mapped": "Q", "enabled": true},
+    {"original": "W", "mapped": "W", "enabled": true},
+    {"original": "E", "mapped": "E", "enabled": true},
+    {"original": "R", "mapped": "R", "enabled": true}
+  ],
+  "unit_skill_mappings": [
+    {"original": "A", "mapped": "A", "enabled": true},
+    {"original": "S", "mapped": "S", "enabled": true},
+    {"original": "D", "mapped": "D", "enabled": true},
+    {"original": "F", "mapped": "F", "enabled": true}
+  ]
+}

@@ -1,0 +1,29 @@
+# MinGW 交叉编译工具链文件
+# 用于在 Linux 上编译 Windows 程序
+
+# 目标系统
+set(CMAKE_SYSTEM_NAME Windows)
+
+# 交叉编译器路径
+set(CMAKE_C_COMPILER x86_64-w64-mingw32-gcc)
+set(CMAKE_CXX_COMPILER x86_64-w64-mingw32-g++)
+set(CMAKE_RC_COMPILER x86_64-w64-mingw32-windres)
+
+# MinGW include 和库路径
+set(MINGW_PREFIX /usr/x86_64-w64-mingw32)
+set(CMAKE_FIND_ROOT_PATH ${MINGW_PREFIX})
+
+# 搜索程序时只在目标环境中搜索
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+
+# 搜索库和头文件时只在目标环境中搜索
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+
+# 禁用标准库的搜索路径
+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
+
+# 添加额外的 include 路径
+list(APPEND CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES ${MINGW_PREFIX}/include)
+list(APPEND CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES ${MINGW_PREFIX}/include/c++/13.2.0)
+list(APPEND CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES ${MINGW_PREFIX}/include/c++/13.2.0/x86_64-w64-mingw32)

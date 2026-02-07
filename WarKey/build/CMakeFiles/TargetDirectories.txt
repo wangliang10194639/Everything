@@ -1,0 +1,7 @@
+/root/Everything/WarKey/build/CMakeFiles/WarKey.dir
+/root/Everything/WarKey/build/CMakeFiles/edit_cache.dir
+/root/Everything/WarKey/build/CMakeFiles/rebuild_cache.dir
+/root/Everything/WarKey/build/CMakeFiles/list_install_components.dir
+/root/Everything/WarKey/build/CMakeFiles/install.dir
+/root/Everything/WarKey/build/CMakeFiles/install/local.dir
+/root/Everything/WarKey/build/CMakeFiles/install/strip.dir
