@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄罗斯方块 - Tetris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>俄罗斯方块</h1>
+        
+        <div class="main-area">
+            <div class="game-board-container">
+                <canvas id="game-board" width="300" height="600"></canvas>
+                <div class="board-border"></div>
+            </div>
+            
+            <div class="side-panel">
+                <div class="info-box">
+                    <h3>下一个方块</h3>
+                    <canvas id="next-piece" width="120" height="120"></canvas>
+                </div>
+                
+                <div class="info-box">
+                    <h3>得分</h3>
+                    <div id="score">0</div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>等级</h3>
+                    <div id="level">1</div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>消除行数</h3>
+                    <div id="lines">0</div>
+                </div>
+                
+                <div class="controls-info">
+                    <h3>操作说明</h3>
+                    <ul>
+                        <li>← → : 左右移动</li>
+                        <li>↓ : 加速下落</li>
+                        <li>↑ : 旋转方块</li>
+                        <li>空格 : 快速下落</li>
+                        <li>P : 暂停/继续</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-controls">
+            <button id="start-btn">开始游戏</button>
+            <button id="pause-btn" disabled>暂停</button>
+            <button id="reset-btn">重新开始</button>
+        </div>
+        
+        <div id="game-over" class="modal hidden">
+            <div class="modal-content">
+                <h2>游戏结束</h2>
+                <p>最终得分: <span id="final-score">0</span></p>
+                <button id="restart-btn">再来一局</button>
+            </div>
+        </div>
+        
+        <div id="pause-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>游戏暂停</h2>
+                <p>按 P 键继续</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
