@@ -1,0 +1,16 @@
+{
+  "name": "slingshot-hero",
+  "version": "1.0.0",
+  "description": "弹弓奇兵：城堡冲刺微信小游戏",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "directories": {
+    "lib": "js"
+  },
+  "engines": {
+    "wechat": ">=3.14.2"
+  }
+}

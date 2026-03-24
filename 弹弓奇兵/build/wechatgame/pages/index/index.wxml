@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="container">
+  <canvas 
+    class="game-canvas" 
+    type="2d" 
+    id="gameCanvas"
+    bindtouchstart="onTouchStart"
+    bindtouchmove="onTouchMove"
+    bindtouchend="onTouchEnd">
+  </canvas>
+  
+  <view class="loading" wx:if="{{loading}}">
+    <text class="loading-text">游戏加载中...</text>
+    <progress percent="{{progress}}" show-info stroke-width="3" />
+  </view>
+  
+  <view class="menu" wx:elif="{{showMenu}}">
+    <view class="title">🎯 弹弓奇兵：城堡冲刺</view>
+    <view class="subtitle">发射英雄，摧毁邪恶城堡！</view>
+    <button class="start-btn" bindtap="startGame">开始游戏</button>
+    <button class="shop-btn" bindtap="openShop">商店</button>
+  </view>
+  
+  <view class="game-ui" wx:elif="{{inGame}}">
+    <view class="top-bar">
+      <view class="gold">💰 {{gold}}</view>
+      <view class="score">⭐ {{score}}</view>
+      <button class="pause-btn" bindtap="pauseGame">⏸️</button>
+    </view>
+    <view class="bottom-bar">
+      <view class="heroes">
+        <view 
+          class="hero-icon {{selectedHero === index ? 'selected' : ''}}" 
+          wx:for="{{heroes}}" 
+          wx:key="index"
+          bindtap="selectHero" 
+          data-index="{{index}}">
+          {{item.icon}}
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="result" wx:elif="{{showResult}}">
+    <view class="result-title">{{result.success ? '🎉 关卡完成!' : '💥 挑战失败!'}}</view>
+    <view class="result-stats">
+      <view>得分: {{result.score}}</view>
+      <view>金币: +{{result.gold}}</view>
+    </view>
+    <button class="next-btn" bindtap="nextLevel">{{result.success ? '下一关' : '重新开始'}}</button>
+    <button class="menu-btn" bindtap="backToMenu">返回菜单</button>
+  </view>
+</view>

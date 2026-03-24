@@ -1,0 +1,8 @@
+正在编译代码
+Compile minigame
+Compile jSON files
+Compiling pages/index/index.wxss
+Compiling pages/index/index.wxss
+ENOENT: no such file or directory, open '//wsl$/Ubuntu/root/Everything/弹弓奇兵/build/wechatgame/pages/index/index.wxss'
+ENOENT: no such file or directory, open '//wsl$/Ubuntu/root/Everything/弹弓奇兵/build/wechatgame/pages/index/index.wxss'
+ENOENT: no such file or directory, open '//wsl$/Ubuntu/root/Everything/弹弓奇兵/build/wechatgame/pages/index/index.wxss'

@@ -1,0 +1,8 @@
+Loading project all files...
+Loading project all files success
+Loading project all files...
+Loading project all files success
+编译 game.json
+game.json: ["workers"] 字段需为 目录
+编译 game.json
+game.json: ["workers"] 字段需为 目录

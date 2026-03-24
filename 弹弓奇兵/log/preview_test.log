@@ -1,0 +1,28 @@
+🎭 开始预览测试...
+测试时间: Mon Feb 16 01:47:32 CST 2026
+构建目录: /root/Everything/弹弓奇兵/build/wechatgame
+📋 检查必需文件...
+✅ 所有必需文件存在
+🔍 检查文件内容完整性...
+✅ game.js 使用正确的 wx.onLaunch API
+✅ index.wxss 已移除不兼容的CSS属性
+⚙️  检查配置文件格式...
+✅ game.json 格式正确
+✅ app.json 格式正确
+✅ project.config.json 格式正确
+🔨 模拟编译过程...
+🔐 检查文件权限...
+✅ /root/Everything/弹弓奇兵/build/wechatgame/pages/index/index.wxss 可读
+✅ /root/Everything/弹弓奇兵/build/wechatgame/pages/index/index.json 可读
+✅ /root/Everything/弹弓奇兵/build/wechatgame/pages/index/index.wxml 可读
+✅ /root/Everything/弹弓奇兵/build/wechatgame/pages/index/index.js 可读
+✅ /root/Everything/弹弓奇兵/build/wechatgame/project.config.json 可读
+✅ /root/Everything/弹弓奇兵/build/wechatgame/sitemap.json 可读
+✅ /root/Everything/弹弓奇兵/build/wechatgame/main.js 可读
+✅ /root/Everything/弹弓奇兵/build/wechatgame/game.js 可读
+✅ /root/Everything/弹弓奇兵/build/wechatgame/app.json 可读
+✅ /root/Everything/弹弓奇兵/build/wechatgame/project.json 可读
+✅ /root/Everything/弹弓奇兵/build/wechatgame/game.json 可读
+✅ 预览测试完成！
+📄 预览报告已生成: /root/Everything/弹弓奇兵/build/wechatgame/PREVIEW_REPORT.md
+📝 详细日志: /root/Everything/弹弓奇兵/log/preview_test.log

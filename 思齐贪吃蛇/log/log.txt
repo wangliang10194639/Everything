@@ -1,0 +1,8 @@
+Loading project all files...
+Loading project all files success
+编译 game.json
+编译 game.json
+game.json: 未找到 ["openDataContext"] 对应的 shared/index.js 文件
+game.json: 未找到 ["openDataContext"] 对应的 shared/index.js 文件
+Loading project all files...
+Loading project all files success

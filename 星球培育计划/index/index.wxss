@@ -1,0 +1,10 @@
+/* index.wxss - 微信小游戏兼容版本 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #ffffff;
+  background-color: #0a0e27;
+}

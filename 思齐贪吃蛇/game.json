@@ -1,0 +1,61 @@
+{
+  "deviceOrientation": "portrait",
+  "openDataContext": "shared/",
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+  "miniprogramRoot": ".",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "appid": "wxad8a414f26812641",
+  "projectname": "思齐贪吃蛇",
+  "libVersion": "3.14.2",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": []
+    }
+  },
+  "srcMiniprogramRoot": ".",
+  "compileType": "game",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  },
+  "description": "思齐贪吃蛇 - 经典微信小游戏"
+}

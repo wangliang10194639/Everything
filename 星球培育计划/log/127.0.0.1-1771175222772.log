@@ -1,0 +1,15 @@
+Mon Feb 16 2026 01:06:57 GMT+0800 (中国标准时间) 文章推荐
+getSystemInfo API 提示
+小程序基础库从 3.7.0 起正式支持 HarmonyOS 平台，开发者可通过 wx.getDeviceInfo() 判断平台进行兼容处理，让小程序在 HarmonyOS 也获得最佳体验，查看指引[https://developers.weixin.qq.com/community/develop/doc/00008e041106f0259bb33530164409]
+关于上述警告，点击查看更多信息：https://developers.weixin.qq.com/community/develop/doc/00008e041106f0259bb33530164409]
+ReferenceError: global is not defined
+    at config.js? [sm]:4
+    at VM177 WAGameSubContext.js:1
+    at Object.runWith (VM177 WAGameSubContext.js:1)
+    at E (VM177 WAGameSubContext.js:1)
+    at n (VM177 WAGameSubContext.js:1)
+    at game.js? [sm]:4
+    at VM177 WAGameSubContext.js:1
+    at Object.runWith (VM177 WAGameSubContext.js:1)
+    at E (VM177 WAGameSubContext.js:1)
+    at game.js:1(env: Windows,mg,2.01.2510280; lib: 3.14.2)

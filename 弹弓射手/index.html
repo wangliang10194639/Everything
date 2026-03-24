@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹弓奇兵：城堡冲刺 - 预览版</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-align-items: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        
+        #gameContainer {
+            position: relative;
+            width: 375px;
+            height: 667px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        #gameCanvas {
+            width: 100%;
+            height: 100%;
+            background: #87CEEB;
+        }
+        
+        #loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-align-items: center;
+            align-items: center;
+            z-index: 100;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #333;
+            border-top: 5px solid #fff;
+            border-radius: 50%;
+            -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        
+        @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            z-index: 10;
+        }
+        
+        .control-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid white;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="750" height="1334"></canvas>
+        
+        <div id="loading">
+            <div class="spinner"></div>
+            <div>正在加载游戏...</div>
+            <div style="font-size: 12px; margin-top: 10px;">弹弓奇兵：城堡冲刺</div>
+        </div>
+        
+        <div id="controls">
+            <button class="control-btn" onclick="startGame()">开始游戏</button>
+            <button class="control-btn" onclick="pauseGame()">暂停</button>
+            <button class="control-btn" onclick="resumeGame()">继续</button>
+        </div>
+    </div>
+
+    <script>
+        // 模拟微信小游戏环境
+        window.GameGlobal = window.GameGlobal || {};
+        window.wx = window.wx || {
+            createCanvas: function() {
+                return document.getElementById('gameCanvas');
+            },
+            createImage: function() {
+                return new Image();
+            },
+            getWindowInfo: function() {
+                return {
+                    screenWidth: 750,
+                    screenHeight: 1334
+                };
+            },
+            getSystemInfoSync: function() {
+                return {
+                    screenWidth: 750,
+                    screenHeight: 1334
+                };
+            },
+            onTouchStart: function(callback) {
+                canvas.addEventListener('touchstart', callback);
+                canvas.addEventListener('mousedown', function(e) {
+                    callback({ touches: [{ clientX: e.clientX, clientY: e.clientY }] });
+                });
+            },
+            onTouchMove: function(callback) {
+                canvas.addEventListener('touchmove', callback);
+                canvas.addEventListener('mousemove', function(e) {
+                    callback({ touches: [{ clientX: e.clientX, clientY: e.clientY }] });
+                });
+            },
+            onTouchEnd: function(callback) {
+                canvas.addEventListener('touchend', callback);
+                canvas.addEventListener('mouseup', function(e) {
+                    callback({ touches: [{ clientX: e.clientX, clientY: e.clientY }] });
+                });
+            },
+            onTouchCancel: function(callback) {
+                canvas.addEventListener('touchcancel', callback);
+            },
+            createInnerAudioContext: function() {
+                return {
+                    src: '',
+                    loop: false,
+                    autoplay: false,
+                    play: function() {},
+                    pause: function() {},
+                    stop: function() {}
+                };
+            },
+            vibrateShort: function() {
+                // 振动模拟
+                console.log('振动效果');
+            },
+            getStorageSync: function(key) {
+                return localStorage.getItem(key);
+            },
+            setStorageSync: function(key, value) {
+                localStorage.setItem(key, value);
+            }
+        };
+
+        // 获取canvas上下文
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // 模拟游戏加载
+        setTimeout(function() {
+            document.getElementById('loading').style.display = 'none';
+            
+            // 这里可以初始化实际的游戏逻辑
+            initGamePreview();
+        }, 2000);
+
+        function initGamePreview() {
+            // 简单的预览渲染
+            function renderPreview() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // 绘制背景
+                ctx.fillStyle = '#87CEEB';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                // 绘制地面
+                ctx.fillStyle = '#8B4513';
+                ctx.fillRect(0, canvas.height - 100, canvas.width, 100);
+                
+                // 绘制弹弓
+                ctx.strokeStyle = '#8B4513';
+                ctx.lineWidth = 8;
+                ctx.beginPath();
+                ctx.moveTo(canvas.width/2 - 30, canvas.height - 100);
+                ctx.lineTo(canvas.width/2, canvas.height - 150);
+                ctx.lineTo(canvas.width/2 + 30, canvas.height - 100);
+                ctx.stroke();
+                
+                // 绘制提示文字
+                ctx.fillStyle = '#FFFFFF';
+                ctx.font = '24px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('弹弓奇兵：城堡冲刺', canvas.width/2, 100);
+                ctx.font = '16px Arial';
+                ctx.fillText('拖拽弹弓发射英雄，摧毁敌人的城堡！', canvas.width/2, 150);
+                ctx.fillText('这是一个预览版本，完整功能请在微信开发者工具中体验', canvas.width/2, 200);
+                
+                requestAnimationFrame(renderPreview);
+            }
+            
+            renderPreview();
+        }
+
+        function startGame() {
+            alert('游戏开始！在微信开发者工具中体验完整功能。');
+        }
+
+        function pauseGame() {
+            alert('游戏暂停');
+        }
+
+        function resumeGame() {
+            alert('游戏继续');
+        }
+
+        // 防止页面滚动
+        document.body.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+        }, { passive: false });
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "engine": "cocos-creator-js",
+  "version": "2.4.11",
+  "name": "弹弓奇兵：城堡冲刺",
+  "id": "slingshot_hero_castle_rush",
+  "uuid": "slingshot-hero-castle-rush-2024",
+  "packages": "./packages"
+}

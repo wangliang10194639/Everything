@@ -1,0 +1,4 @@
+<!--index.wxml - 微信小游戏兼容版本-->
+<view class="container">
+  <text>星球培育计划 - 微信小游戏</text>
+</view>
