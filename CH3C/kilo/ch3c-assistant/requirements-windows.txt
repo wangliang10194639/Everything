@@ -1,0 +1,14 @@
+# CH3C Assistant - Windows特有依赖
+# 仅在Windows环境安装
+
+# 内存读取
+pymem>=1.10.0
+
+# Windows API
+pywin32>=305
+
+# 键盘钩子
+keyboard>=0.13.5
+
+# 鼠标钩子
+mouse>=0.7.1

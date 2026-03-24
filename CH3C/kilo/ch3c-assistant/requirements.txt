@@ -1,0 +1,17 @@
+# CH3C Assistant - Core Dependencies
+# 跨平台核心依赖
+
+# GUI框架
+PyQt6>=6.5.0
+
+# 进程管理
+psutil>=5.9.0
+
+# 配置解析 (标准库，无需安装)
+# configparser
+
+# 日志
+colorlog>=6.7.0
+
+# 打包工具
+pyinstaller>=6.0.0

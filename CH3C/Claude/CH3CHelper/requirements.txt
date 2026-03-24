@@ -1,0 +1,23 @@
+# 澄海3C辅助软件 - Windows版依赖
+# 内存操作
+pymem>=1.13
+
+# Windows API访问
+pywin32>=305
+
+# 输入模拟与热键
+pynput>=1.7
+keyboard>=0.13
+pyautogui>=0.9
+
+# 图像处理
+Pillow>=9.0
+
+# 系统信息
+psutil>=5.9
+
+# 可选：GUI界面
+PyQt5>=5.15
+
+# 打包工具
+pyinstaller>=5.8
